@@ -1,0 +1,30 @@
+{
+  "name": "fast-bin",
+  "version": "0.0.0",
+  "description": "Quickly Convert an Array of Numbers into their Minimal Binary Representations",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJDufour/fast-bin.git"
+  },
+  "keywords": [
+    "binary",
+    "array",
+    "uint"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/DanielJDufour/fast-bin/issues"
+  },
+  "homepage": "https://github.com/DanielJDufour/fast-bin#readme",
+  "devDependencies": {
+    "ava": "^3.8.2"
+  },
+  "dependencies": {
+    "lodash.max": "^4.0.1"
+  }
+}
