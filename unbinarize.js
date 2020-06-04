@@ -1,5 +1,5 @@
 const unbinarize = ({ data, nbits }) => {
-  if (typeof data !== 'string') throw new Error('data must be an array');
+  if (typeof data !== 'string') throw new Error('data must be a string of 1s and 0s');
 
   const result = [];
   for (let i = 0; i < data.length; i += nbits) {
