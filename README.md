@@ -9,6 +9,8 @@ npm install fast-bin
 # usage
 ## binarize an array of numbers
 ```javascript
+const binarize = require('fast-bin/binarize');
+
 const input = [0, 1, 2, 3, 4];
 const { data, nbits } = binarize(input);
 // data is '000001010011100'
@@ -17,6 +19,8 @@ const { data, nbits } = binarize(input);
 
 ## unbinarize a string
 ```javascript
+const unbinarize = require('fast-bin/unbinarize');
+
 const data = '00011011';
 const nbits = 2;
 const arr = unbinarize({ data, nbits });
