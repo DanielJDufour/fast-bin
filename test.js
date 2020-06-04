@@ -16,6 +16,17 @@ test('binarize 2-bit numbers string', t => {
   t.is(nbits, 2);
 });
 
+test('binarize 8-bit string', t => {
+  const input = [
+    36, 40, 161, 66, 231, 138,  9, 30, 60, 56, 177, 132,
+    5, 142, 26, 52, 72, 225, 228, 70, 17, 22, 40, 88,
+    178, 68, 197, 138, 18, 88, 120, 226,  6, 135, 146, 30
+  ];
+  const { data, nbits } = binarize(input);
+  t.is(nbits, 8);
+  t.is(new Set(data).size, 2);
+});
+
 test('unbinarize 1-bit string', t => {
   const data = '0101';
   const nbits = 1;
