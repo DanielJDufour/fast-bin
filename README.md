@@ -12,8 +12,8 @@ npm install fast-bin
 const binarize = require('fast-bin/binarize');
 
 const input = [0, 1, 2, 3, 4];
-const { data, nbits } = binarize(input);
-// data is '000001010011100'
+const { data: output, nbits } = binarize({ data: input });
+// output is '000001010011100'
 // nbits is 3
 ```
 

@@ -4,14 +4,14 @@ const unbinarize = require('./unbinarize');
 
 test('binarize binary string', t => {
   const input = [0, 1, 0, 1];
-  const { data, nbits } = binarize(input);
+  const { data, nbits } = binarize({ data: input });
   t.is(data, '0101');
   t.is(nbits, 1);
 });
 
 test('binarize 2-bit numbers string', t => {
   const input = [0, 1, 2, 3];
-  const { data, nbits } = binarize(input);
+  const { data, nbits } = binarize({ data: input });
   t.is(data, '00011011');
   t.is(nbits, 2);
 });
@@ -22,9 +22,16 @@ test('binarize 8-bit string', t => {
     5, 142, 26, 52, 72, 225, 228, 70, 17, 22, 40, 88,
     178, 68, 197, 138, 18, 88, 120, 226,  6, 135, 146, 30
   ];
-  const { data, nbits } = binarize(input);
+  const { data, nbits } = binarize({ data: input });
   t.is(nbits, 8);
   t.is(new Set(data).size, 2);
+});
+
+test('force binarize 2-bit numbers string to 8-bits', t => {
+  const input = [0, 1, 2, 3];
+  const { data, nbits } = binarize({ data: input, nbits: 8, sep: ' ' });
+  t.is(data, '00000000 00000001 00000010 00000011');
+  t.is(nbits, 8);
 });
 
 test('unbinarize 1-bit string', t => {
