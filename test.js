@@ -47,3 +47,15 @@ test('unbinarize 2-bit string', t => {
   const arr = unbinarize({ data, nbits });
   t.deepEqual(arr, [0, 1, 2, 3]);
 });
+
+test('throw error when try to unbinarize with nbits 0', t => {
+  let error;
+  try {
+    const data = '00011011';
+    const nbits = 0;
+    unbinarize({ data, nbits });
+  } catch (e) {
+    error = e;
+  }
+  t.is(error.message, '[fast-bin] nbits cannot be zero');
+});
