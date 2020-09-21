@@ -1,9 +1,10 @@
 {
   "name": "fast-bin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Quickly Convert an Array of Numbers into their Minimal Binary Representations",
   "main": "index.js",
   "scripts": {
+    "format": "npx prettier --tab-width 4 --write *.js",
     "test": "ava"
   },
   "repository": {
@@ -25,6 +26,6 @@
     "ava": "^3.8.2"
   },
   "dependencies": {
-    "lodash.max": "^4.0.1"
+    "fast-max": "0.0.0"
   }
 }
